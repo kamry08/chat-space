@@ -31,7 +31,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-##　groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
@@ -43,9 +43,11 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :group
 - belongs_to :user
+
 
 * Database initialization
 
