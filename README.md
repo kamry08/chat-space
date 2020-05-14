@@ -22,14 +22,22 @@ Things you may want to cover:
 |mail|text|null: false|
 |password|string|
 
+## Associationテーブル
+- has many :tweet
+- has many :group
 
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
+|text|text|
 |image|text|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+
+## Associationテーブル
+- belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -37,6 +45,9 @@ Things you may want to cover:
 |id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 
+## Associationテーブル
+- has many :user
+- has many :tweet
 
 ## groups_usersテーブル
 |Column|Type|Options|
