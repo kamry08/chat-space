@@ -1,39 +1,23 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
 
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|name|integer|null: false, foreign_key: true|
+|name|string|null: false|
 |mail|text|null: false|
-|password|string|
+|password|string|null: false|
 
 ## Associationテーブル
-- has many :tweet
-- has many :group
+- has many :tweets
+- has many :groups through groups_users
+- has many :groups_users
 
 ## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |text|text|
 |image|text|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 
 ## Associationテーブル
 - belongs_to :user
@@ -42,30 +26,21 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 
 ## Associationテーブル
-- has many :user
-- has many :tweet
+- has many :users through groups_users
+- has many :groups_users
+- has many :tweets 
 
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
