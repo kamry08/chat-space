@@ -1,0 +1,112 @@
+a{
+  text-decoration: none;
+}
+
+.main_header_username_box{
+  display:flex;
+  margin-top:15px;
+}
+
+.notice {
+  background-color: #38aef0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.side-bar {
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  width: 300px;
+  height: 100vh;
+
+  .side-header {
+  background-color: #253141;
+  width: 300px;
+  height: 100px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    .side-header_box {
+      width: 260px;
+      height: 20px;
+      display:flex;
+      justify-content: space-between;
+
+      .side-header_box_user-name {
+        margin: 0;
+      }
+      .side-header_box_menu {
+        width: 60px;
+        height: 20px;
+        box-sizing: border-box;
+
+
+        .far{
+          text-decoration: none;
+          color: white;
+          margin-right: 5px;
+        }
+        
+        .fa-edit{
+
+          text-decoration: none;
+          color: white;
+        }
+      
+        .fas{
+          text-decoration: none;
+          color: white;
+
+
+        }
+        
+        .fa-cog{
+          text-decoration: none;
+          color: white;
+
+        }
+
+      }
+    }
+  }
+
+  .groups {
+    background-color: #2f3e51;
+    width: 300px;
+    height: calc( 100% - 100px );
+    padding: 0px 20px;
+
+    .group {
+      height: 91px;
+      width: 300px;
+      background-color: #2f3e51;
+      box-sizing: border-box;
+
+      .group_name {
+        font-size: 15px;
+        padding: 20px 0px 5px;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: white;
+      }
+      .last-comment {
+        font-size: 11px;
+        margin: 0px;
+        text-decoration: none;
+        color: white;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
