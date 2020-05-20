@@ -1,0 +1,27 @@
+.main_chat
+  .main_header
+    %h2.main_header_groupname 
+      techcamp
+      .main_header_username_box
+        .main_header_usernamelist Member:
+        .main_header_usernamelist_name Kayo Morita
+    .main_header_edit-btn Edit
+  .messages 
+    .message
+      .message_user-info
+        .message_user-info_name Kayo Morita
+        .message_user-info_date 2020/05/19(tue)18:00:00
+      %p.message_text 今度旅行に行こう！
+    .message
+      .message_user-info
+        .message_user-info_name Mai Morita
+        .message_user-info_date 2020/05/19(tue)18:00:00
+      %p.message_text いいね！どこがいいかな？
+  .form
+    .new-message
+      %new-message_typing
+      %label{class: "new-message_image"}
+        %i.far.fa-image
+        %input{type:"file",class:"new-message_image_file"}
+    %input{type:"submit-btn", class:"submit-btn", value:"Send"}
+
