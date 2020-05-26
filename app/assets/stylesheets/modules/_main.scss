@@ -17,21 +17,23 @@
     padding:0px 40px;
     justify-content: space-between;
     display: flex;
-
+    
     &_groupname {
       color: #333333;
       font-size: 20px;
       margin: 35px 0px 0px 0px;
       box-sizing: border-box;
     }
-  
+    
     &_usernamelist {
       font-size: 12px;
       color: #999999;
+      display: flex;
     }
     &_usernamelist_name{
       font-size: 12px;
       color: #999999;
+
     }
 
     .main_header_edit-btn {
