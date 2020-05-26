@@ -6,22 +6,13 @@
         .main_header_usernamelist Member:
         .main_header_usernamelist_name Kayo Morita
     .main_header_edit-btn Edit
-  .messages 
-    .message
-      .message_user-info
-        .message_user-info_name Kayo Morita
-        .message_user-info_date 2020/05/19(tue)18:00:00
-      %p.message_text 今度旅行に行こう！
-    .message
-      .message_user-info
-        .message_user-info_name Mai Morita
-        .message_user-info_date 2020/05/19(tue)18:00:00
-      %p.message_text いいね！どこがいいかな？
+  .messages
+    =render @messages 
   .form
-    .new-message
-      %new-message_typing
-      %label{class: "new-message_image"}
-        %i.far.fa-image
-        %input{type:"file",class:"new-message_image_file"}
-    %input{type:"submit-btn", class:"submit-btn", value:"Send"}
-
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'new_message_typing', placeholder: 'type a message'
+      .new_message_box
+        = f.label :image, class: 'new_message_box_image' do
+          = icon('far', 'image', class: 'new_message_box_icon')
+          = f.file_field :image, class: 'new_message_box_image_file'
+      = f.submit 'Send', class: 'submit-btn'
