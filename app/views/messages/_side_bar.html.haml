@@ -18,4 +18,5 @@
           %p.group_name 
             = group.name
         =link_to "#" do
-          %p.last-comment まだメッセージがありません
+          %p.last-comment
+            = group.show_last_message
