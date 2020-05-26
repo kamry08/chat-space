@@ -1,10 +1,13 @@
 .main_chat
   .main_header
-    %h2.main_header_groupname 
-      techcamp
+    %h2.main_header_groupname
+      = @group.name
       .main_header_username_box
-        .main_header_usernamelist Member:
-        .main_header_usernamelist_name Kayo Morita
+        .main_header_usernamelist
+          Member:
+          - @group.users.each do |user|
+            .main_header_usernamelist_name
+              = user.name
     .main_header_edit-btn Edit
   .messages
     =render @messages 
