@@ -3,35 +3,35 @@ $(function(){
         if ( message.image ) {
           var html =
            `<div class="message">
-              <div class="upper-message">
-                <div class="upper-message__user-name">
+              <div class="message_user-info">
+                <div class="message_user-info_name">
                   ${message.user_name}
                 </div>
-                <div class="upper-message__date">
+                <div class="message_user-info_date">
                   ${message.created_at}
                 </div>
               </div>
-              <div class="lower-message">
-                <p class="lower-message__content">
+              <div class="message_text">
+                <p class="message.content">
                   ${message.content}
                 </p>
               </div>
-              <img src=${message.image} >
+              <img src=${message.image}>
             </div>`
           return html;
         } else {
           var html =
            `<div class="message">
-              <div class="upper-message">
-                <div class="upper-message__user-name">
+              <div class="message_user-info">
+                <div class="message_user-info_name">
                   ${message.user_name}
                 </div>
-                <div class="upper-message__date">
+                <div class="message_user-info_date">
                   ${message.created_at}
                 </div>
               </div>
-              <div class="lower-message">
-                <p class="lower-message__content">
+              <div class="message_text">
+                <p class="message.content">
                   ${message.content}
                 </p>
               </div>
@@ -56,11 +56,12 @@ $(function(){
           $('.messages').append(html);
           $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
           $('form')[0].reset();
-          $('.form__submit').prop('disabled', false);
         })
-        .fail(function() {
+        .fail(function(){
           alert("メッセージ送信に失敗しました");
-      });
-        
+        })
+        .always(function(){
+          $('.submit-btn').prop('disabled', false);
+        })
     });
 });
