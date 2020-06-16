@@ -15,9 +15,9 @@
     =render @messages 
   .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'new_message_typing', placeholder: 'type a message'
       .new_message_box
+        = f.text_field :content, class: 'new_message_typing', placeholder: 'type a message'
         = f.label :image, class: 'new_message_box_image' do
           = icon('far', 'image', class: 'new_message_box_icon')
           = f.file_field :image, class: 'new_message_box_image_file'
-      = f.submit 'Send', class: 'submit-btn'
+      = f.submit 'Send', class: 'submit-btn'  
